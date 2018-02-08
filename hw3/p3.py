@@ -10,5 +10,5 @@ print(anser)
 
 #third
 value = input("what is the one side of the Regular pentagon lenth? ")
-anser = (1.0 / 4.0) * (5.0 * (5.0 + 2.0 * (5.0)**0.5))**0.5 * value^2.0
+anser = (1.0 / 4.0) * (5.0 * (5.0 + 2.0 * (5.0)**0.5))**0.5 * value**2.0
 print(anser)
