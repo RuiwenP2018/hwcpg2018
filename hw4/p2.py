@@ -9,15 +9,15 @@ print (upper_name)
 
 ##revers the name
 
-#revers = name.split (" ")
+###revers = name.split (" ")
 
-#numberofwords = len(revers)
+###numberofwords = len(revers)
 
-#newwords = revers[0,(numberofwords),-1]
+###newwords = revers[0,(numberofwords),-1]
 
-#sentence = "".join(newwords)
+###sentence = "".join(newwords)
 
-#print (sentence)
+###print (sentence)
 
 newname = " ".join(word[::-1] for word in name.split())
 
