@@ -1,0 +1,73 @@
+import random
+
+maxAttempts = 100
+
+count = 9999
+
+solCount = 0
+
+while count > maxAttempts:
+
+	solCount += 1
+
+	puzzle = []
+
+	for i in range (9):
+
+		row = []
+
+		for j in range (9):
+
+			row.append (0)
+
+		puzzle.append (row)
+
+	for row in range (9):
+
+		for col in range (9):
+
+			thisRow = puzzle [row]
+
+			thisCol = []
+
+			for h in range (9):
+
+				thisCol.append (puzzle [row] [col])
+
+			subCol = int (col/3)
+
+			subRow = int (row/3)
+
+			subMat = []
+
+			for subR in range (3):
+
+				for subC in range (3):
+
+					subMat.append (puzzle [subRow*3 + subR] [subCol*3 + subC])
+
+			randValue = 0
+
+			count = 0
+
+			while randValue in thisRow or randValue in thisCol or randValue in subMat:
+
+				randValue = random.randint (1,9)
+
+				count += 1
+
+				if count > maxAttempts:
+
+					break
+
+			puzzle[row][col] = randValue
+
+			if count > maxAttempts:
+
+				break
+
+		if count > maxAttempts:
+
+			break
+
+for r in puzzle: print r
