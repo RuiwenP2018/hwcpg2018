@@ -10,11 +10,11 @@ def winner(firstplayer,secondplayer):
 
 	if firstplayer > secondplayer:
 
-		return fpname + " win the round."
+		return "firstplayer win the round."
 
 	elif secondplayer > firstplayer:
 
-		return spname + " win the round."
+		return "secondplayer win the round.")
 
 	else:
 
@@ -25,21 +25,32 @@ def finalwinner(fpwin,spwin):
 
 	if fpwin > spwin:
 
-		return fpname + " win the game."
+		return (fpname + " win the game.")
 
 	elif spwin > fpwin:
 
-		return spname + " win the game."
+		return (spname + " win the game.")
 
-	else:
 
-		return (game)
 
 
 #ask for the name
 fpname = raw_input ("what is your name?")
 
 spname = raw_input ("what is your name?")
+
+#what each player get on their numbers
+low = (1)
+
+high = (6)
+
+dice1 = (low,high)
+
+dice2 = (low,high)
+
+firstplayer = dice1
+
+secondplayer = dice2
 
 #1 game
 round = 3
@@ -49,26 +60,23 @@ fpwin = 0
 spwin = 0
 
 #game start
-while (round >= 0):
-
-#what each player get on their numbers
-	firstplayer = dicesum()
-
-	secondplayer = dicesum()
+while round >= 0:
 
 #play the game
+	firstplayer = 
+
 	game = winner(firstplayer,secondplayer)
 
-	if (firstplayer > secondplayer):
+	if firstplayer > secondplayer:
 
 		fpwin += 1
 
-	elif (secondplayer > firstplayer):
+	elif secondplayer > firstplayer:
 
 		spwin += 1
 
 	round -= 1
-	print (firstplayer,secondplayer,game)
+	print (firstplayer,secondplayer)
 
 #finash the game
 gamewin = finalwinner(fpwin,spwin)
